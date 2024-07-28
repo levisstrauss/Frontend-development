@@ -1,6 +1,12 @@
 # Frontend Development Code Repository
 
-Welcome to the **Frontend Development Code Repository**. This repository contains various resources and code examples related to frontend development, including HTML, CSS, and JavaScript.
+Welcome to the **Frontend Development Code Repository**.
+This repository contains various resources and code examples 
+related to frontend development, including
+
+  * HTML
+  * CSS
+  * JavaScript
 
 ## Description
 
