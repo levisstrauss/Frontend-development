@@ -1,0 +1,390 @@
+
+/*---------------- Selecting elements ---------------*/
+body{
+    background-color: #444;
+    color: white;
+    font-size: 27px;
+}
+
+
+button{
+    background-color: rebeccapurple;
+    height: 70px;
+    width: 70px;
+}
+.title{
+    font-size: 54px;
+}
+
+#content{
+    font-size: 20px;
+}
+
+/*---------------- Typography with Css---------------*/
+/*
+Text-align
+Font-size
+Color
+Line-height
+*/
+.typography {
+    text-align: center;
+    width: 64%;
+    margin: auto;
+    font-size: 1.4em;
+    line-height: 1.5em;
+  }
+
+
+/*---------------- Box models -------------------------*/
+.boxe{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #a03636;
+    margin: 25px;
+    padding: 50px;
+}
+/*---------------- Display properties---------------*/
+/*
+display: inline
+display: inline-block
+display: block
+display: none
+*/
+.box1 {
+    background-color: red;
+    color: white;
+    /* display: inline; inline the content */
+    /* display: inline-block; inline and block the content */
+    /* display: block; /* block the content */
+    /* display: none; hide the content */
+    margin: 50px;
+    width: 500px; 
+    height: 150px; 
+    font-size: 67px;
+
+     /* Border Radius */
+    /* border-radius: 25px; */
+    border-radius: 85%;
+    padding: 132px;
+    /* z-index: 1; */
+
+    /* Backgropund image */
+    background-image: url("../images/img.jpg");
+    /* background-size: contain; */
+    background-size: cover;
+}
+
+  /*---------------- Flexbox ---------------*/
+  .container{
+    display: flex;
+    /* Main axis */
+    flex-direction: row;
+    /* flex-direction: column;
+    flex-direction: row-reverse;
+    flex-direction: column-reverse; */
+    align-items: center;
+    justify-content: center;
+    border: 2px solid yellow;
+}
+.box{
+    width: 250px;
+    height: 150px;
+    border: 1px solid red;
+}
+
+#one{
+    order: 1;       
+}
+
+#two{
+    order: 2;       
+}
+
+#three{
+    order: 3;     
+}
+/*--------------------------------- flexBox -------------------------------*/ 
+
+/*---------------- justify-content ---------------*/ 
+  /* HORIZONTAL
+
+    flex-start: Items align to the left side of the container.
+    flex-end: Items align to the right side of the container.
+    center: Items align at the center of the container.
+    space-between: Items display with equal spacing between them.
+    space-around: Items display with equal spacing around them.
+
+    example: A              B: this will push A to B
+    #pond {
+      display: flex;
+      justify-content: flex-end
+   }
+
+/*---------------- align-items ---------------*/ 
+    /* VERTICALLY
+
+    Now use align-items to help the frogs get to the bottom of the pond. This CSS property aligns items vertically and accepts the following values:
+    flex-start: Items align to the top of the container.
+    flex-end: Items align to the bottom of the container.
+    center: Items align at the vertical center of the container.
+    baseline: Items display at the baseline of the container.
+    stretch: Items are stretched to fit the container.
+
+/*---------------- flex-direction  ---------------*/ 
+   /*
+    row: Items are placed the same as the text direction.
+    row-reverse: Items are placed opposite to the text direction.
+    column: Items are placed top to bottom.
+    column-reverse: Items are placed bottom to top.
+
+    Example
+    #pond {
+    display: flex;
+    flex-direction: row-reverse
+    }
+
+    NB: 
+     flex-direction: row      justify-content: HORIZONTAL,  align-items: VERTICAL
+     flex-direction: column   justify-content: VERTICAL,    align-items: HORIZONTAL
+
+     Exmaple:
+
+    #pond {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end
+    }
+
+    #pond {
+        display: flex;
+        flex-direction:column-reverse;
+        justify-content: space-between
+    }
+
+    #pond {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: flex-end
+   }
+
+   /*---------------- order property  ---------------*/ 
+   /*
+    #pond {
+        display: flex;
+    }
+    
+    .yellow {
+    order: 3
+    }
+
+    #pond {
+      display: flex;
+   }
+
+   .red {
+    order: -1
+    }  
+/*---------------- align-self ---------------*/ 
+/*
+    flex-start: Items align to the top of the container.
+    flex-end: Items align to the bottom of the container.
+    center: Items align at the vertical center of the container.
+    baseline: Items display at the baseline of the container.
+    stretch: Items are stretched to fit the container.  
+
+#pond {
+  display: flex;
+  align-items: flex-start;
+}
+
+.yellow {
+   align-self: flex-end;
+}
+
+#pond {
+  display: flex;
+  align-items: flex-start;
+}
+
+.yellow {
+  order:2;
+  align-self: flex-end
+}
+
+/*---------------- flex-wrap ---------------*/ 
+/*
+    nowrap: Every item is fit to a single line.
+    wrap: Items wrap around to additional lines.
+    wrap-reverse: Items wrap around to additional lines in reverse.
+
+#pond {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap
+}
+
+/*---------------- flex-flow ---------------*/ 
+/* flex-flow is a combination of: flex-direction and flex-wrap
+   flex-flow: row wrap;
+
+
+#pond {
+  display: flex;
+  flex-flow: column wrap
+}
+
+/*---------------- align-content ---------------*/ 
+/*
+    flex-start: Lines are packed at the top of the container.
+    flex-end: Lines are packed at the bottom of the container.
+    center: Lines are packed at the vertical center of the container.
+    space-between: Lines display with equal spacing between them.
+    space-around: Lines display with equal spacing around them.
+    stretch: Lines are stretched to fit the container.
+
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start
+}
+
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end
+}
+
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-content: center
+}  
+
+/*--------------------------------- Grid -------------------------------*/ 
+
+.containers{
+    display: grid;
+    width: 100%; /* 80vw; */
+    margin: auto;
+    grid-template-columns: 35vw 35vw;
+    grid-template-rows: 35vh 35vh;
+    grid-gap: 15px;
+    grid-template-areas:
+    "top top"
+    "bottomLeft bottomRight";
+    border: 2px solid rgb(247, 182, 96);
+    justify-content: center;
+}
+
+.bo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    padding: 15px;
+}
+
+#test1{
+  grid-area: top;
+}
+#test2{
+    grid-area: bottomLeft;
+}
+#test3{
+    grid-area: bottomRight;
+}
+
+/* second grid */
+
+.containers3{
+    display: grid;
+    /* width: 100%; /* 80vw; */
+    /* margin: auto; */
+    grid-template-columns: 30px 300px;
+    grid-template-rows: 250px 600px;
+    /* grid-gap: 15px; */
+    grid-template-areas:
+    "hd hd hd hd hd hd hd hd"
+    "sd sd main main main main main main"
+    "ft ft ft ft ft ft ft ft";
+    border: 2px solid yellow;
+    /* justify-content: center; */
+    color: black;
+}
+
+.boz{
+    border: 1px solid red;
+    background: #F8FA90;
+}
+
+.header{
+  grid-area: hd;
+}
+.footer {
+    grid-area: ft;
+}
+.sidebar{
+    grid-area: sd;
+}
+.content{
+    grid-area: main;
+}
+
+/* Media Queries */
+
+@media(min-width: 600px) and (max-width: 1100px) {
+    .containers3{
+        display: grid;
+        /* width: 100%; /* 80vw; */
+        /* margin: auto; */
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 250px 600px;
+        /* grid-gap: 15px; */
+        grid-template-areas:
+        "hd hd hd hd hd hd hd hd"
+        "sd sd main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+        border: 2px solid yellow;
+        /* justify-content: center; */
+    }
+}
+
+@media (min-width: 1101px){
+    .containers3{
+        border: 5px solid blue;
+        /* display: grid;
+        grid-template-columns: 30px 300px;
+        grid-template-rows: 250px 600px; */
+        /* grid-gap: 15px; */
+        grid-template-areas:
+        "hd hd hd hd hd hd hd hd"
+        "sd sd sd sd main main main main"
+        "ft ft ft ft ft ft ft ft";
+    }
+}
+
+/*  grid example 3 */
+
+.containers4{
+    display: grid;
+    width: 80vw; /* 80vw; */
+    height: 100vh;
+    margin: auto;
+
+    grid-auto-rows: minmax(50px, 135px); 
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    border: 2px solid rgb(247, 182, 96)
+    
+    
+}
+
+.boze{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
